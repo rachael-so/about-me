@@ -1,0 +1,13 @@
+h1 {
+  color: brown;
+}
+
+p {
+  background-color: yellow;
+  border: 1px solid brown;
+  margin-right: 700px;
+}
+
+body {
+  background-image: url(http://everything.typepad.com/photos/uncategorized/2008/03/28/crosshatch.png);
+}
