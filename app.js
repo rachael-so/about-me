@@ -82,17 +82,20 @@ alert('For the next two questions try to get the correct answers. You will be gi
 
 //Question 6
 for (var i = 0; i < 4; i++) {
-  var answer6 = prompt('Can you guess which city in Washington State I want to live in the future? (4 tries)').toUpperCase();
-  if (answer6 === 'BELLEVUE') {
-    alert('Correct! I love Bellevue and I hope I can live there at least once in my life.');
+  var answer6 = prompt('Can you guess how old I am? *use integers (4 tries)').toUpperCase();
+  if (answer6 === '19') {
+    alert('Correct! My birth date is March 26, 1998.');
     i = 4;
     correctCount++;
-    console.log('user correctly responded "BELLEVUE" to question 6: Correct');
+    console.log('user correctly responded "19" to question 6: Correct');
   } else {
     if (i === 3) {
-      alert('Incorrect! In the future I want to live in Bellevue. I love Bellevue and I hope I can live there at least once in my life.');
+      alert('Incorrect! My birthdate is March 26, 1998');
     } else {
-      alert('Incorrect! try again');
+      if (answer6 < 19)
+        alert('Your guess is too low!');
+      if (answer6 > 19)
+        alert('Your guess is too high!');
     }
     console.log('user responded "' + answer7 + '" to question 6: Incorrect');
   } //end big if/else statment
