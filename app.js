@@ -1,90 +1,120 @@
 'use strict';
 
-var username = prompt('Please enter a username');
-console.log('when prompted for username, user entered' + username);
+var correctCount = 0;
 
-confirm('Hi ' + username + '! The next five questions will ask you to guess whether the following statements about myself are true or false. If they are true enter "YES" if they are false enter "NO"');
-console.log('the user confirmed the rules... the game will now begin');
+var username = prompt('Please enter a username');
+console.log('when prompted for username, user entered ' + username);
+
+//start game
+confirm('Hi ' + username + '! Welcome to my About Me page. Let\'s start out with a quick quiz about myself')
+console.log('start game');
+
+//part 1 of game
+confirm('We will start with five questions that will ask you to guess whether the following statements about myself are true or false. If they are true enter "YES" if they are false enter "NO"');
 
 //Question 1
-var answer1 = prompt('I was born in Korea.').toUpperCase();
-switch (answer1) {
-  case 'YES':
-    alert('Incorrect! I am Korean but I was born and raised in the beautiful state of Washington.');
+var answer1 = prompt('My favorite color is purple.').toUpperCase();
+if (answer1 === 'YES' || answer1 === 'Y') {
+    alert('Incorrect! Although I like the color purple, my favorite color is actually brown.');
     console.log('user responded "YES" to question 1: Incorrect');
-    break;
-
-  case 'NO':
-    alert('Correct! I am Korean but I was born and raised in the beautiful state of Washington.');
+} else if (answer1 === 'NO' || answer1 === 'N') {
+    alert('Correct! Although I like the color purple, my favorite color is actually brown.');
+    correctCount++;
     console.log('user responded "NO" to question 1: Correct');
-    break;
-
-  default: alert('ERROR! Make sure to enter either "YES" or "NO"');
+} else {
+  alert('ERROR! Make sure to enter either "YES" or "NO"');
 }
 
 //Question 2
-var answer2 = prompt('I am currently a student at Georgetown University.').toUpperCase();
-switch (answer2) {
-  case 'YES':
-    alert('Correct! I just completed my 1st year at GU.');
+var answer2 = prompt('I really like circles.').toUpperCase();
+if (answer2 === 'YES' || answer2 === 'Y') {
+    alert('Correct! Circles are my favorite shape. I love sitting in circles.');
+    correctCount++;
     console.log('user responded "YES" to question 2: Correct');
-    break;
-
-  case 'NO':
-    alert('Incorrect! I just completed my 1st year at GU.');
+} else if (answer2 === 'NO' || answer2 === 'N') {
+    alert('Incorrect! Circles are my favorite shape. I love sitting in circles.');
     console.log('user responded "NO" to question 2: Incorrect');
-    break;
-
-  default: alert('ERROR! Make sure to enter either "YES" or "NO"');
+} else {
+  alert('ERROR! Make sure to enter either "YES" or "NO"');
 }
 
 //Question 3
 var answer3 = prompt('I have a dog named Happy!').toUpperCase();
-switch (answer3) {
-  case 'YES':
+if (answer3 === 'YES' || answer3 === 'Y') {
     alert('Correct! My dad got Happy for me when I was in 3rd grade after I persistently asked for a dog.');
+    correctCount++;
     console.log('user responded "YES" to question 3: Correct');
-    break;
-
-  case 'NO':
+} else if (answer3 === 'NO' || answer3 === 'N') {
   alert('Incorrect! My dad got Happy for me when I was in 3rd grade after I persistently asked for a dog.');
   console.log('user responded "NO" to question 3: Incorrect');
-    break;
-
-  default: alert('ERROR! Make sure to enter either "YES" or "NO"');
+} else {
+  alert('ERROR! Make sure to enter either "YES" or "NO"');
 }
 
 //Question 4
 var answer4 = prompt('I have visited Japan, Australia, France, and Italy').toUpperCase();
-switch (answer4) {
-  case 'YES':
+if (answer4 === 'YES' || answer4 === 'Y') {
   alert('Incorrect! These are all places I really want to visit.');
   console.log('user responded "YES" to question 4: Incorrect');
-    break;
-
-  case 'NO':
+} else if (answer4 === 'NO' || answer4 === 'N') {
   alert('Correct! These are all places I really want to visit.');
+  correctCount++;
   console.log('user responded "NO" to question 4: Correct');
-    break;
-
-  default: alert('ERROR! Make sure to enter either "YES" or "NO"');
+} else {
+  alert('ERROR! Make sure to enter either "YES" or "NO"');
 }
 
 //Question 5
 var answer5 = prompt('I am very excited to work in computer science one day!').toUpperCase();
-switch (answer5) {
-  case 'YES':
+if (answer5 === 'YES' || answer5 === 'Y') {
   alert('Correct! I really want to become a good coder and use my skills to do something useful.');
+  correctCount++;
   console.log('user responded "YES" to question 5: Correct');
-    break;
-
-  case 'NO':
+} else if (answer5 === 'NO' || answer5 == 'N') {
   alert('Incorrect! Of course I am excited! I really want to become a good coder and use my skills to do something useful.');
-  console.log('user responded "NO" to question 5: Incorrect')
-    break;
-
-  default: alert('ERROR! Make sure to enter either "YES" or "NO"');
+  console.log('user responded "NO" to question 5: Incorrect');
+} else {
+  alert('ERROR! Make sure to enter either "YES" or "NO"');
 }
 
+//part 2 of game
+alert('For the next two questions try to get the correct answers. You will be given an indicated number of tries.');
+
+//Question 6
+for (var i = 0; i < 4; i++) {
+  var answer6 = prompt('Can you guess which city in Washington State I want to live in the future? (4 tries)').toUpperCase();
+  if (answer6 === 'BELLEVUE') {
+    alert('Correct! I love Bellevue and I hope I can live there at least once in my life.');
+    i = 4;
+    correctCount++;
+    console.log('user correctly responded "BELLEVUE" to question 6: Correct');
+  } else {
+    if (i === 3) {
+      alert('Incorrect! In the future I want to live in Bellevue. I love Bellevue and I hope I can live there at least once in my life.');
+    } else {
+      alert('Incorrect! try again');
+    }
+    console.log('user responded "' + answer7 + '" to question 6: Incorrect');
+  } //end big if/else statment
+} //end for loop
+
+//Question 7
+for (var i = 0; i < 6; i++) {
+  var answer7 = prompt('Can you guess the breed of one of the dogs I have owned?').toUpperCase();
+  if (answer7 === 'YELLOW LABRADOR RETRIEVER' || answer7 === 'LABRADOR RETRIEVER' || answer7 === 'LABRADOR' || answer7 === 'RETRIEVER' || answer7 === 'LAB' || answer7 === 'BICHON FRISE' || answer7 === 'BICHON' || answer7 === 'MALTESE') {
+    alert('Correct! I have had two dogs: a yellow labrador retriever and a bichon frise, maltese mix.');
+    i = 6;
+    correctCount++;
+    console.log('user responded "' + answer7 + '" to question 7: Correct');
+  } else {
+    if (i === 5) {
+      alert('Incorrect! I have had two dogs: a yellow labrador retriever and a bichon frise, maltese mix.');
+    } else {
+      alert('Incorrect! try again');
+    }
+    console.log('user incorrectly responded "' + answer7 + '" to question 7: Correct');
+  } //end big if/else statement
+} //end for loop
+
 //THE END
-alert('You have completed the quiz. Thank you ' + username + ' for getting to know me! Maybe next time I can get to know you!')
+alert('You have completed the quiz. Your correctly answered ' + correctCount + ' out of 7 questions. Thank you, ' + username + ', for getting to know me! To learn more, continue reading this page.');
