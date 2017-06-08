@@ -69,6 +69,7 @@ if (answer4 === 'YES' || answer4 === 'Y') {
 }
 }
 //Question 5
+function question5(){
 var answer5 = prompt('I am very excited to work in computer science one day!').toUpperCase();
 if (answer5 === 'YES' || answer5 === 'Y') {
   alert('Correct! I really want to become a good coder and use my skills to do something useful.');
@@ -80,7 +81,7 @@ if (answer5 === 'YES' || answer5 === 'Y') {
 } else {
   alert('ERROR! Make sure to enter either "YES" or "NO"');
 }
-
+}
 //part 2 of game
 alert('For the next two questions try to get the correct answers. You will be given an indicated number of tries.');
 
