@@ -55,6 +55,7 @@ if (answer3 === 'YES' || answer3 === 'Y') {
 }
 }
 //Question 4
+function question4(){
 var answer4 = prompt('I have visited Japan, Australia, France, and Italy').toUpperCase();
 if (answer4 === 'YES' || answer4 === 'Y') {
   alert('Incorrect! These are all places I really want to visit.');
@@ -66,7 +67,7 @@ if (answer4 === 'YES' || answer4 === 'Y') {
 } else {
   alert('ERROR! Make sure to enter either "YES" or "NO"');
 }
-
+}
 //Question 5
 var answer5 = prompt('I am very excited to work in computer science one day!').toUpperCase();
 if (answer5 === 'YES' || answer5 === 'Y') {
