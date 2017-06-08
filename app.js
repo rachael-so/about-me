@@ -86,6 +86,7 @@ if (answer5 === 'YES' || answer5 === 'Y') {
 alert('For the next two questions try to get the correct answers. You will be given an indicated number of tries.');
 
 //Question 6
+function question6(){
 for (var i = 0; i < 4; i++) {
   var answer6 = prompt('Can you guess how old I am? *use integers (4 tries)').toUpperCase();
   if (answer6 === '19') {
@@ -105,7 +106,7 @@ for (var i = 0; i < 4; i++) {
     console.log('user responded "' + answer7 + '" to question 6: Incorrect');
   } //end big if/else statment
 } //end for loop
-
+}
 //Question 7
 for (var i = 0; i < 6; i++) {
   var answer7 = prompt('Can you guess the breed of one of the dogs I have owned?').toUpperCase();
