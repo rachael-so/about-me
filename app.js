@@ -6,44 +6,46 @@ var username = prompt('Please enter a username');
 console.log('when prompted for username, user entered ' + username);
 
 //start game
-confirm('Hi ' + username + '! Welcome to my About Me page. Let\'s start out with a quick quiz about myself')
+confirm('Hi ' + username + '! Welcome to my About Me page. Let\'s start out with a quick quiz about myself');
 console.log('start game');
 
 //part 1 of game
 confirm('We will start with five questions that will ask you to guess whether the following statements about myself are true or false. If they are true enter "YES" if they are false enter "NO"');
 
 //Question 1
-var answer1 = prompt('My favorite color is purple.').toUpperCase();
-if (answer1 === 'YES' || answer1 === 'Y') {
+function question1(){
+  var answer1 = prompt('My favorite color is purple.').toUpperCase();
+  if (answer1 === 'YES' || answer1 === 'Y') {
     alert('Incorrect! Although I like the color purple, my favorite color is actually brown.');
     console.log('user responded "YES" to question 1: Incorrect');
-} else if (answer1 === 'NO' || answer1 === 'N') {
+  } else if (answer1 === 'NO' || answer1 === 'N') {
     alert('Correct! Although I like the color purple, my favorite color is actually brown.');
     correctCount++;
     console.log('user responded "NO" to question 1: Correct');
-} else {
-  alert('ERROR! Make sure to enter either "YES" or "NO"');
+  } else {
+    alert('ERROR! Make sure to enter either "YES" or "NO"');
+  }
 }
-
 //Question 2
-var answer2 = prompt('I really like circles.').toUpperCase();
-if (answer2 === 'YES' || answer2 === 'Y') {
+function question2(){
+  var answer2 = prompt('I really like circles.').toUpperCase();
+  if (answer2 === 'YES' || answer2 === 'Y') {
     alert('Correct! Circles are my favorite shape. I love sitting in circles.');
     correctCount++;
     console.log('user responded "YES" to question 2: Correct');
-} else if (answer2 === 'NO' || answer2 === 'N') {
+  } else if (answer2 === 'NO' || answer2 === 'N') {
     alert('Incorrect! Circles are my favorite shape. I love sitting in circles.');
     console.log('user responded "NO" to question 2: Incorrect');
-} else {
-  alert('ERROR! Make sure to enter either "YES" or "NO"');
+  } else {
+    alert('ERROR! Make sure to enter either "YES" or "NO"');
+  }
 }
-
 //Question 3
 var answer3 = prompt('I have a dog named Happy!').toUpperCase();
 if (answer3 === 'YES' || answer3 === 'Y') {
-    alert('Correct! My dad got Happy for me when I was in 3rd grade after I persistently asked for a dog.');
-    correctCount++;
-    console.log('user responded "YES" to question 3: Correct');
+  alert('Correct! My dad got Happy for me when I was in 3rd grade after I persistently asked for a dog.');
+  correctCount++;
+  console.log('user responded "YES" to question 3: Correct');
 } else if (answer3 === 'NO' || answer3 === 'N') {
   alert('Incorrect! My dad got Happy for me when I was in 3rd grade after I persistently asked for a dog.');
   console.log('user responded "NO" to question 3: Incorrect');
@@ -93,9 +95,9 @@ for (var i = 0; i < 4; i++) {
       alert('Incorrect! My birthdate is March 26, 1998');
     } else {
       if (answer6 < 19)
-        alert('Your guess is too low!');
+      alert('Your guess is too low!');
       if (answer6 > 19)
-        alert('Your guess is too high!');
+      alert('Your guess is too high!');
     }
     console.log('user responded "' + answer7 + '" to question 6: Incorrect');
   } //end big if/else statment
