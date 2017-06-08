@@ -41,6 +41,7 @@ function question2(){
   }
 }
 //Question 3
+function question3(){
 var answer3 = prompt('I have a dog named Happy!').toUpperCase();
 if (answer3 === 'YES' || answer3 === 'Y') {
   alert('Correct! My dad got Happy for me when I was in 3rd grade after I persistently asked for a dog.');
@@ -52,7 +53,7 @@ if (answer3 === 'YES' || answer3 === 'Y') {
 } else {
   alert('ERROR! Make sure to enter either "YES" or "NO"');
 }
-
+}
 //Question 4
 var answer4 = prompt('I have visited Japan, Australia, France, and Italy').toUpperCase();
 if (answer4 === 'YES' || answer4 === 'Y') {
