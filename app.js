@@ -108,6 +108,7 @@ for (var i = 0; i < 4; i++) {
 } //end for loop
 }
 //Question 7
+function question7(){
 for (var i = 0; i < 6; i++) {
   var answer7 = prompt('Can you guess the breed of one of the dogs I have owned?').toUpperCase();
   if (answer7 === 'YELLOW LABRADOR RETRIEVER' || answer7 === 'LABRADOR RETRIEVER' || answer7 === 'LABRADOR' || answer7 === 'RETRIEVER' || answer7 === 'LAB' || answer7 === 'BICHON FRISE' || answer7 === 'BICHON' || answer7 === 'MALTESE') {
@@ -124,6 +125,6 @@ for (var i = 0; i < 6; i++) {
     console.log('user incorrectly responded "' + answer7 + '" to question 7: Correct');
   } //end big if/else statement
 } //end for loop
-
+}
 //THE END
 alert('You have completed the quiz. Your correctly answered ' + correctCount + ' out of 7 questions. Thank you, ' + username + ', for getting to know me! To learn more, continue reading this page.');
