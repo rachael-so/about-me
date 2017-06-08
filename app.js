@@ -9,9 +9,6 @@ console.log('when prompted for username, user entered ' + username);
 confirm('Hi ' + username + '! Welcome to my About Me page. Let\'s start out with a quick quiz about myself');
 console.log('start game');
 
-//part 1 of game
-confirm('We will start with five questions that will ask you to guess whether the following statements about myself are true or false. If they are true enter "YES" if they are false enter "NO"');
-
 //Question 1
 function question1(){
   var answer1 = prompt('My favorite color is purple.').toUpperCase();
@@ -26,6 +23,7 @@ function question1(){
     alert('ERROR! Make sure to enter either "YES" or "NO"');
   }
 }
+
 //Question 2
 function question2(){
   var answer2 = prompt('I really like circles.').toUpperCase();
@@ -40,6 +38,7 @@ function question2(){
     alert('ERROR! Make sure to enter either "YES" or "NO"');
   }
 }
+
 //Question 3
 function question3(){
   var answer3 = prompt('I have a dog named Happy!').toUpperCase();
@@ -54,6 +53,7 @@ function question3(){
     alert('ERROR! Make sure to enter either "YES" or "NO"');
   }
 }
+
 //Question 4
 function question4(){
   var answer4 = prompt('I have visited Japan, Australia, France, and Italy').toUpperCase();
@@ -68,6 +68,7 @@ function question4(){
     alert('ERROR! Make sure to enter either "YES" or "NO"');
   }
 }
+
 //Question 5
 function question5(){
   var answer5 = prompt('I am very excited to work in computer science one day!').toUpperCase();
@@ -82,18 +83,19 @@ function question5(){
     alert('ERROR! Make sure to enter either "YES" or "NO"');
   }
 }
+
 //Question 6
 function question6(){
   for (var i = 0; i < 4; i++) {
     var answer6 = prompt('Can you guess how old I am? *use integers (4 tries)').toUpperCase();
     if (answer6 === '19') {
-      alert('Correct! My birth date is March 26, 1998.');
+      alert('Correct! I was born in 1998.');
       i = 4;
       correctCount++;
       console.log('user correctly responded "19" to question 6: Correct');
     } else {
       if (i === 3) {
-        alert('Incorrect! My birthdate is March 26, 1998');
+        alert('Incorrect! I was born in 1998');
       } else {
         if (answer6 < 19)
           alert('Your guess is too low!');
@@ -104,32 +106,40 @@ function question6(){
     } //end big if/else statment
   } //end for loop
 }
+
 //Question 7
 function question7(){
+  var correctBreeds = ['YELLOW LABRADOR RETRIEVER', 'LABRADOR RETRIEVER', 'YELLOW LAB', 'LABRADOR', 'RETRIEVER', 'LAB', 'BICHON FRISE', 'MALTESE'];
   for (var i = 0; i < 6; i++) {
     var answer7 = prompt('Can you guess the breed of one of the dogs I have owned?').toUpperCase();
-    if (answer7 === 'YELLOW LABRADOR RETRIEVER' || answer7 === 'LABRADOR RETRIEVER' || answer7 === 'LABRADOR' || answer7 === 'RETRIEVER' || answer7 === 'LAB' || answer7 === 'BICHON FRISE' || answer7 === 'BICHON' || answer7 === 'MALTESE') {
-      alert('Correct! I have had two dogs: a yellow labrador retriever and a bichon frise, maltese mix.');
-      i = 6;
-      correctCount++;
-      console.log('user responded "' + answer7 + '" to question 7: Correct');
-    } else {
-      if (i === 5) {
-        alert('Incorrect! I have had two dogs: a yellow labrador retriever and a bichon frise, maltese mix.');
-      } else {
-        alert('Incorrect! try again');
+    for (var j = 0; j < correctBreeds.length; j++) {
+      if (answer7 === correctBreeds[j]) {
+        alert('Correct! I have had two dogs: a yellow labrador retriever and a bichon frise, maltese mix.');
+        i = 6;
+        correctCount++;
+        console.log('user responded "' + answer7 + '" to question 7: Correct');
       }
-      console.log('user incorrectly responded "' + answer7 + '" to question 7: Correct');
-    } //end big if/else statement
-  } //end for loop
+    }
+    if (i === 5) {
+      alert('Incorrect! I have had two dogs: a yellow labrador retriever and a bichon frise, maltese mix.');
+    } else if (i < 5) {
+      alert('Incorrect! try again');
+    }
+    console.log('user incorrectly responded "' + answer7 + '" to question 7: Correct');
+  } //end big for loop
 }
+
+//part 1 of game
+confirm('We will start with five questions that will ask you to guess whether the following statements about myself are true or false. If they are true enter "YES" if they are false enter "NO"');
 question1();
 question2();
 question3();
 question4();
 question5();
+//part 2 of game
 alert('For the next two questions try to get the correct answers. You will be given an indicated number of tries.');
 question6();
 question7();
+
 //THE END
 alert('You have completed the quiz. Your correctly answered ' + correctCount + ' out of 7 questions. Thank you, ' + username + ', for getting to know me! To learn more, continue reading this page.');
